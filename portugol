@@ -1,0 +1,146 @@
+// Lista laço condicional
+
+Exercício 2:Elabore um sistema que leia as variáveis C e N, respectivamente código e número de horas trabalhadas de um operário. E calcule o salário sabendo-se que ele ganha R$ 10,00 por hora. Quando o número de horas exceder a 50 calcule o excesso de pagamento armazenando-o na variável E, caso contrário zerar tal variável. A hora excedente de trabalho vale R$ 20,00. No final do processamento imprimir o salário total e o salário excedente.
+
+
+programa {
+	inclua biblioteca Matematica --> mat
+ 
+	
+	funcao inicio() {
+		
+		inteiro c, n, E
+		real salarioT, salarioExc
+
+		escreva("\n Informe o seu código: ")
+		leia(c)
+		escreva("\n Informe o número de horas trabalhadas: ")
+		leia(n)
+
+		se(n > 50){
+			E = n - 50
+			salarioExc = E * 20
+			salarioT = 500 + salarioExc // 10 * 50 
+		} senao {
+			E = 0
+			salarioExc = 0
+			salarioT = n * 10 // n é o numero de horas trabalhadas
+		}
+
+		escreva("\n Salário total: ", salarioT)
+		escreva("\n Salário excedente ", salarioExc)
+	}
+
+}
+
+
+Exercício 4: Faça um sistema que leia um número inteiro e mostre uma mensagem indicando se este número é par ou ímpar, e se é positivo ou negativo.
+
+
+programa {
+	inclua biblioteca Matematica --> mat
+
+	
+	funcao inicio() {
+		inteiro numero
+
+		escreva("Informe um número inteiro: ")
+		leia(numero)
+
+		 se(numero % 2 == 0) {   // se o resto da divisão de "numero" por 2 for igual a 
+			 escreva("\n par")
+	    } senao {
+	    		escreva("\n ímpar")
+	    }
+
+		se(numero > 0){
+			escreva("\n positivo")
+		} senao {
+		se (numero < 0) 
+			escreva("\n negativo")
+		} 
+	}
+}
+
+// Lista programação sequencial
+Exercício 1
+
+programa {
+	inclua biblioteca Matematica --> mat
+ 
+	
+	funcao inicio() {
+
+	inteiro idadeA, idadeM, idadeD, dias //= 0 // inicializar com 0 para não haver interferência com a memória
+	
+	escreva("\n Informe sua idade: ") // 21 anos, 256 meses. 7823 dias
+	leia(idadeA)
+
+	escreva("\n Informe a idade em meses: ")
+	leia(idadeM)
+
+	escreva("\n Informe a idade em dias: ")
+	leia(dias)
+
+	idadeD = idadeA * 365 + idadeM * 30 + dias // não considero ano bissexto AINDA
+	
+
+	escreva("Sua idade em dias é ", idadeD)
+	
+	}
+
+}
+
+
+Exercício 4. 
+
+programa {
+	inclua biblioteca Matematica --> mat
+ 
+	
+	funcao inicio() {
+		
+		inteiro a, b, c
+		real d
+
+		escreva("\nInforme o valor de A:")
+		leia(a)
+		escreva("\nInforme o valor de B:")
+		leia(b)
+		escreva("\nInforme o valor de C:")
+		leia(c)
+		
+		d = (mat.potencia((a+b), 2.0) + mat.potencia((b+c), 2.0))/2
+		escreva("\n O valor de D é: ", d)
+	}
+}
+
+
+Exercício 5. Faça um sistema que leia as 3 notas de um aluno e calcule a média final deste aluno. Considerar que a média é ponderada e que o peso das notas é: 2,3 e 5, respectivamente. 
+
+programa {
+	inclua biblioteca Matematica --> mat
+ 
+	
+	funcao inicio(){
+		
+		real n1, n2, n3, media, mediaF
+		inteiro x = 2
+
+		escreva("Informe n1: ")
+		leia(n1)
+
+		escreva("Informe n2: ")
+		leia(n2)
+
+		escreva("Informe n3: ")
+		leia(n3)
+
+		media = (n1*2) + (n2*3) + (n3*5)
+		limpa()
+		mediaF = media/ (2+3+5)
+		escreva("Media final: " , mediaF)
+
+	}
+
+}

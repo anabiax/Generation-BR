@@ -1,0 +1,98 @@
+/* PARA
+
+1- A prefeitura de uma cidade fez uma pesquisa entre 20 de seus habitantes,
+coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:  
+a) média do salário da população;
+b) média do número de filhos;
+c) maior salário;
+d) percentual de pessoas com salário até R$100,00. */
+
+programa{
+	inclua biblioteca Matematica-->mat
+	
+	funcao inicio(){
+		real salario, mediaS=0.0, mediaNumF=0.0, maiorS=0.0, percPessoasSalario=0.0, vTotalSalarios=0.0
+		inteiro numF=0, numHab=20, totalF=0
+
+		para(inteiro habitante = 0; habitante < numHab; habitante++){
+			escreva("\n Informe o valor do seu salário: ")
+			leia(salario)
+			escreva("\n Quantidade de filhos: ")
+			leia(numF)
+
+			vTotalSalarios += salario
+			totalF += numF
+
+			se(maiorS < salario){
+				maiorS = salario
+			}
+			se(salario <=100){
+				percPessoasSalario += 1
+			}
+		}
+		mediaS = vTotalSalarios / numHab
+		mediaNumF = totalF / numHab
+
+		escreva("\n A média de salários é: ", mat.arredondar(mediaS,2))
+		escreva("\n A média de filhos é: ", mediaNumF)
+		escreva("\n O maior salário é: ", maiorS)
+		escreva("\n Percentual de pessoas com salário até R$100,00: ", percPessoasSalario)
+	}
+}
+
+
+/* ENQUANTO
+
+1- Elaborar um programa que efetue a leitura sucessiva de valores numéricos e
+apresente no final o total do somatório, a média e o total de valores lidos. O programa
+deve fazer as leituras dos valores enquanto o usuário estiver fornecendo valores
+positivos. Ou seja, o programa deve parar quando o usuário fornecer um valor
+negativo. */
+
+programa{
+	
+	funcao inicio(){
+
+	
+
+		inteiro n=1, s = 0, c=0, media
+
+		enquanto(n > 0){
+			escreva("\n Informe um número: ")
+			leia(n)
+
+			s = s + n
+			c++
+		}
+		
+		media = s/c
+
+		escreva("\n Somatório: ", s)
+		escreva("\n Média: ", media)
+		escreva("\n Valores: ", c)
+	}
+}
+
+/* FAÇA...ENQUANTO
+
+1- Faça um programa que mostre uma contagem na tela de 233 a 456, só que
+contando de 3 em 3 quando estiver entre 300 e 400 e de 5 em 5 quando não estiver. */
+
+programa{
+	
+	funcao inicio(){
+
+	
+	
+		inteiro num=223
+
+		faca{
+			se(num >= 300 e num <=400){
+				num = num +3
+			} senao {
+				num = num +5
+			}
+		} enquanto (num <= 456)
+	}
+}
+
